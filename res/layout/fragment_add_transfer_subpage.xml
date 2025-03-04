@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTransferSubpage">
+
+    <EditText
+        android:id="@+id/transferName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:hint="@string/TransferName"
+        android:imeOptions="actionDone"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textSize="@dimen/StandardTextSize"
+        android:inputType="textCapSentences"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transferName">
+
+        <CheckBox
+            android:id="@+id/senderBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layoutDirection="rtl"
+            android:text="@string/Senders"
+            android:textSize="@dimen/StandardTextSize" />
+
+        <CheckBox
+            android:id="@+id/recipientBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layoutDirection="rtl"
+            android:text="@string/Recipients"
+            android:textSize="@dimen/StandardTextSize" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sendersAndRecipientsRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/sentAmountTitle"
+
+        tools:layout="@layout/sender_recipient"
+        tools:itemCount="10"/>
+
+    <TextView
+        android:id="@+id/sentAmountTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/SentAmountTitle"
+        android:textSize="@dimen/StandardTextSize"
+
+        app:layout_constraintBottom_toTopOf="@+id/sentAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendersAndRecipientsRv"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/receivedAmountTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ReceivedAmountTitle"
+        android:textSize="@dimen/StandardTextSize"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/sentAmountTitle"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <EditText
+        android:id="@+id/sentAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:selectAllOnFocus="true"
+        android:gravity="center_vertical"
+
+        android:textSize="@dimen/StandardTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/transferAmountsHint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sentAmountTitle"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <EditText
+        android:id="@+id/receivedAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:selectAllOnFocus="true"
+        android:gravity="center_vertical"
+
+        android:textSize="@dimen/StandardTextSize"
+        app:layout_constraintBaseline_toBaselineOf="@+id/sentAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/transferAmountsHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/SmallerTextSize"
+        android:text="@string/TransfersAmountsHint"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sentAmount"
+        app:layout_constraintBottom_toTopOf="@id/SaveTransferButton"/>
+
+    <Button
+        android:id="@+id/SaveTransferButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/SaveTransfer"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/transferAmountsHint"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

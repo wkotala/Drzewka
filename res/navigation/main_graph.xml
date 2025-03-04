@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/titlePage">
+
+    <fragment
+        android:id="@+id/titlePage"
+        android:name="com.wikkot.drzewkav1.TitlePage"
+        android:label="fragment_title_page"
+        tools:layout="@layout/fragment_title_page" >
+        <action
+            android:id="@+id/action_titlePage_to_firstPage"
+            app:destination="@id/firstPage"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstPage"
+        android:name="com.wikkot.drzewkav1.FirstPage"
+        android:label="fragment_first_page"
+        tools:layout="@layout/fragment_first_page" >
+        <action
+            android:id="@+id/action_firstPage_to_secondPage"
+            app:destination="@id/secondPage"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/secondPage"
+        android:name="com.wikkot.drzewkav1.SecondPage"
+        android:label="fragment_second_page"
+        tools:layout="@layout/fragment_second_page" >
+        <action
+            android:id="@+id/action_secondPage_to_thirdPage"
+            app:destination="@id/thirdPage"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/thirdPage"
+        android:name="com.wikkot.drzewkav1.ThirdPage"
+        android:label="fragment_third_page"
+        tools:layout="@layout/fragment_third_page" >
+        <action
+            android:id="@+id/action_thirdPage_to_resultPage"
+            app:destination="@id/resultPage"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/resultPage"
+        android:name="com.wikkot.drzewkav1.ResultPage"
+        android:label="fragment_result_page"
+        tools:layout="@layout/fragment_result_page" >
+        <action
+            android:id="@+id/action_resultPage_to_titlePage"
+            app:destination="@id/titlePage"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@+id/titlePage"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

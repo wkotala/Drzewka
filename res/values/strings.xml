@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Drzewka</string>
+    <string name="FirstPageTitle">Krok 1/3\nDodaj ludzi</string>
+    <string name="SecondPageTitle">Krok 2/3\nKoszty dzielone na wszystkich</string>
+    <string name="ThirdPageTitle">Krok 3/3\nDodatkowe przelewy</string>
+    <string name="ResultPageTitle">Wygenerowane drzewko płatności</string>
+    <string name="EmptyString" />
+    <string name="NextPage">Kontynuuj</string>
+    <string name="BackToTitlePage">Powrót do strony głównej</string>
+    <string name="StartApp">Rozpocznij generowanie drzewka</string>
+    <string name="BlankNameError">Imię nie może być puste</string>
+    <string name="RepeatNameError">Imiona nie mogą się powtarzać</string>
+    <string name="Deleted">Usunięto</string>
+    <string name="NameTitle">Imię</string>
+    <string name="CostTitle">Poniesiony koszt</string>
+    <string name="AddCostTitle">Dodaj koszt</string>
+    <string name="Senders">Nadawcy</string>
+    <string name="Recipients">Odbiorcy</string>
+    <string name="SentAmount">Kwota wysyłana na osobę</string>
+    <string name="ReceivedAmount">Kwota otrzymywana na osobę</string>
+    <string name="SentAmountTitle">zł/nadawca</string>
+    <string name="ReceivedAmountTitle">zł/odbiorca</string>
+    <string name="SaveTransfer">Zapisz</string>
+    <string name="Restore">Przywróć</string>
+    <string name="TransferName">Nazwa przelewu</string>
+    <string name="DeletedTransfer">Usunięto przelew</string>
+    <string name="EmptyTransferNameError">Nazwa przelewu nie może być pusta</string>
+    <string name="NoSendersError">Trzeba wybrać co najmniej 1 nadawcę</string>
+    <string name="NoRecipientsError">Trzeba wybrać co najmniej 1 odbiorcę</string>
+    <string name="TransferAmountTooLittle">Zbyt mała kwota przelewu</string>
+    <string name="AddTransfer">Dodaj przelew</string>
+    <string name="TransfersAmountsHint">Wprowadź jedną z kwot i zatwierdź enterem</string>
+    <string name="NoTransfers">Liczba przelewów: %1$d</string>
+    <string name="ConfirmExitQuestion">Czy na pewno chcesz wrócić do strony głównej?</string>
+    <string name="Yes">Tak</string>
+    <string name="No">Nie</string>
+
+</resources>
